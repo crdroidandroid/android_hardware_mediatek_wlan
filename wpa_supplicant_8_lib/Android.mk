@@ -19,10 +19,8 @@
 LOCAL_PATH := $(call my-dir)
 
 ##### For Google SUPPLICANT #####
-ifeq ($(strip $(MTK_BASIC_PACKAGE)),yes)
-
-    WPA_SUPPL_DIR = external/wpa_supplicant_8
-    WPA_SRC_FILE :=
+WPA_SUPPL_DIR = external/wpa_supplicant_8
+WPA_SRC_FILE :=
 
 ifneq ($(BOARD_WPA_SUPPLICANT_DRIVER),)
     CONFIG_DRIVER_$(BOARD_WPA_SUPPLICANT_DRIVER) := y
@@ -71,4 +69,3 @@ LOCAL_SRC_FILES := $(WPA_SRC_FILE)
 LOCAL_C_INCLUDES := $(WPA_SUPPL_DIR_INCLUDE)
 include $(MTK_STATIC_LIBRARY)
 ########################
-endif
