@@ -14,6 +14,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(MTK_WLAN_SUPPORT),yes)
+ifeq ($(BOARD_WLAN_DEVICE), MediaTek)
     include $(call all-makefiles-under,$(LOCAL_PATH))
 endif
