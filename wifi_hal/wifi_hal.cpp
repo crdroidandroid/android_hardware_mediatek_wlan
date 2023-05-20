@@ -968,7 +968,7 @@ protected:
                 return NL_SKIP;
             }
             memcpy(fset, data, min(len, (int) sizeof(*fset)));
-            ALOGI("feature_set=0x%x", *fset);
+            ALOGI("feature_set=0x%lx", *fset);
         } else if (feature_type == WIFI_ATTRIBUTE_ROAMING_CAPABILITIES){
             if(!feature_matrix || !fm_size) {
                 ALOGE("feature_set pointer is not set");
