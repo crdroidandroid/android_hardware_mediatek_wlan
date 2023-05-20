@@ -24,7 +24,7 @@ LOCAL_CFLAGS += -Wno-unused-parameter -Wno-int-to-pointer-cast
 LOCAL_CFLAGS += -Wno-maybe-uninitialized -Wno-parentheses
 LOCAL_CPPFLAGS += -Wno-conversion-null
 
-ifneq ($(TARGET_BUILD_VARIANT), user)
+ifeq ($(TARGET_BUILD_VARIANT),eng)
 LOCAL_CFLAGS += -DCONFIG_DEBUG_VER
 endif
 
